@@ -88,6 +88,7 @@
             this.randomFileReaderButton.TabIndex = 4;
             this.randomFileReaderButton.Text = "Random File Reader";
             this.randomFileReaderButton.UseVisualStyleBackColor = false;
+            this.randomFileReaderButton.Click += new System.EventHandler(this.randomFileReaderButton_Click);
             // 
             // Main
             // 

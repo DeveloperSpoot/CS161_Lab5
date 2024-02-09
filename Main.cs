@@ -33,5 +33,10 @@ namespace CS161_Lab5
             Random_Number_File_Output form = new Random_Number_File_Output();
             form.Show();
         }
+
+        private void randomFileReaderButton_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
