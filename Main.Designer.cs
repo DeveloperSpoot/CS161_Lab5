@@ -66,6 +66,7 @@
             this.calculateFactorButton.TabIndex = 2;
             this.calculateFactorButton.Text = "Calculating the Factor";
             this.calculateFactorButton.UseVisualStyleBackColor = false;
+            this.calculateFactorButton.Click += new System.EventHandler(this.calculateFactorButton_Click);
             // 
             // randomFileWriteButton
             // 
@@ -76,6 +77,7 @@
             this.randomFileWriteButton.TabIndex = 3;
             this.randomFileWriteButton.Text = "Random Number File";
             this.randomFileWriteButton.UseVisualStyleBackColor = false;
+            this.randomFileWriteButton.Click += new System.EventHandler(this.randomFileWriteButton_Click);
             // 
             // randomFileReaderButton
             // 
