@@ -15,5 +15,11 @@ namespace CS161_Lab5
             Addition_Tutor form = new Addition_Tutor();
             form.Show();
         }
+
+        private void randomGuessButton_Click(object sender, System.EventArgs e)
+        {
+            Random_Number_Guessing form = new Random_Number_Guessing();
+            form.Show();
+        }
     }
 }

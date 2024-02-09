@@ -55,6 +55,7 @@
             this.randomGuessButton.TabIndex = 1;
             this.randomGuessButton.Text = "Random Number Guessing";
             this.randomGuessButton.UseVisualStyleBackColor = false;
+            this.randomGuessButton.Click += new System.EventHandler(this.randomGuessButton_Click);
             // 
             // calculateFactorButton
             // 

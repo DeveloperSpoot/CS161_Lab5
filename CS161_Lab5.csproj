@@ -52,6 +52,12 @@
     <Compile Include="Apps\Addition Tutor.Designer.cs">
       <DependentUpon>Addition Tutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apps\Random Number Guessing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apps\Random Number Guessing.Designer.cs">
+      <DependentUpon>Random Number Guessing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Apps\Addition Tutor.resx">
       <DependentUpon>Addition Tutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apps\Random Number Guessing.resx">
+      <DependentUpon>Random Number Guessing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
