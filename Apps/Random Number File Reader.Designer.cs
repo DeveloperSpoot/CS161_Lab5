@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.numbersListBox = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.totalLabel = new System.Windows.Forms.Label();
             this.loadButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.inputFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.numbersListBox);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 176);
@@ -48,17 +49,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Numbers In File";
             // 
-            // listBox1
+            // numbersListBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(7, 20);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(187, 147);
-            this.listBox1.TabIndex = 0;
+            this.numbersListBox.FormattingEnabled = true;
+            this.numbersListBox.Location = new System.Drawing.Point(7, 20);
+            this.numbersListBox.Name = "numbersListBox";
+            this.numbersListBox.Size = new System.Drawing.Size(187, 147);
+            this.numbersListBox.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.totalLabel);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(13, 196);
             this.groupBox2.Name = "groupBox2";
@@ -67,15 +68,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Total";
             // 
-            // label1
+            // totalLabel
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(189, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "And all the pieces fall";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.totalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalLabel.Location = new System.Drawing.Point(7, 19);
+            this.totalLabel.Name = "totalLabel";
+            this.totalLabel.Size = new System.Drawing.Size(189, 26);
+            this.totalLabel.TabIndex = 0;
+            this.totalLabel.Text = "And all the pieces fall";
+            this.totalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // loadButton
             // 
@@ -87,6 +88,7 @@
             this.loadButton.TabIndex = 2;
             this.loadButton.Text = "Load File";
             this.loadButton.UseVisualStyleBackColor = false;
+            this.loadButton.Click += new System.EventHandler(this.loadButton_Click);
             // 
             // exitButton
             // 
@@ -98,6 +100,11 @@
             this.exitButton.TabIndex = 3;
             this.exitButton.Text = "EXIT";
             this.exitButton.UseVisualStyleBackColor = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
+            // inputFileDialog
+            // 
+            this.inputFileDialog.FileName = "openFileDialog1";
             // 
             // Random_Number_File_Reader
             // 
@@ -119,10 +126,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox numbersListBox;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label totalLabel;
         private System.Windows.Forms.Button loadButton;
         private System.Windows.Forms.Button exitButton;
+        private System.Windows.Forms.OpenFileDialog inputFileDialog;
     }
 }

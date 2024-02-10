@@ -36,7 +36,8 @@ namespace CS161_Lab5
 
         private void randomFileReaderButton_Click(object sender, System.EventArgs e)
         {
-
+            Random_Number_File_Reader form = new Random_Number_File_Reader();
+            form.Show();
         }
     }
 }
