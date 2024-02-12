@@ -10,6 +10,10 @@ namespace CS161_Lab5.Apps
             InitializeComponent();
         }
 
+        //Delcaring Min, Max int numbers for our random number to be guessed.
+        const int MIN_INT = 1;
+        const int MAX_INT = 100;
+
         //Declaring global vairables to track the actual number and number of attempts.
 
         int toBeGuessed = 0;
@@ -19,7 +23,7 @@ namespace CS161_Lab5.Apps
         private void Random_Number_Guessing_Load(object sender, EventArgs e)
         {
             Random rand = new Random();
-            toBeGuessed = rand.Next(1, 100);
+            toBeGuessed = rand.Next(MIN_INT, MAX_INT);
         }
 
 

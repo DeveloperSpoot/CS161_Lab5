@@ -10,16 +10,21 @@ namespace CS161_Lab5.Apps
             InitializeComponent();
         }
 
+        //Delcaring max and min numbers for our math problems.
+        const int MIN_INT = 100;
+        const int MAX_INT = 500;
+
         // Declaring vairbales to hold our random numbers for the creation of our math problem.
         private Random random = new Random();
         private int firstNumber;
         private int secondNumber;
 
+
         //Declaring our event method for creating a new math problem.
         private void newButton_Click(object sender, EventArgs e)
         {
-            firstNumber = random.Next(100, 500);
-            secondNumber = random.Next(100, 500);
+            firstNumber = random.Next(MIN_INT, MAX_INT);
+            secondNumber = random.Next(MIN_INT, MAX_INT);
 
             questionLabel.Text = $"{firstNumber} + {secondNumber} =";
             answerTextBox.Text = string.Empty;
