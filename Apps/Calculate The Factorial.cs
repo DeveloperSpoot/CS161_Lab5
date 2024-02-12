@@ -10,6 +10,7 @@ namespace CS161_Lab5.Apps
             InitializeComponent();
         }
 
+        //Method to calulcate the factorial of a given number.
         private void calculateButton_Click(object sender, EventArgs e)
         {
             try
@@ -17,13 +18,13 @@ namespace CS161_Lab5.Apps
                 int toFactor = int.Parse(inputTextBox.Text);
                 int outFactor = 1;
 
-                for(int count = 1; count <= toFactor; count++)
+                for(int count = 1; count <= toFactor; count++) // Loop to calculate the actual factorial.
                 {
                     outFactor = outFactor * count;
                 }
 
                 outputLabel.Text = outFactor.ToString("n1");
-            }catch(Exception ex)
+            }catch(Exception ex) // Catch any invalid inputs.
             {
                 MessageBox.Show(ex.Message);
             }
