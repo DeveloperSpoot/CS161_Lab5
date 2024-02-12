@@ -11,6 +11,7 @@ namespace CS161_Lab5.Apps
             InitializeComponent();
         }
 
+        //Method used to triggle the file input dialog, read the file, and calculate the total of the numbers in the file, as it loads them.
         private void loadButton_Click(object sender, System.EventArgs e)
         {
 
@@ -21,12 +22,14 @@ namespace CS161_Lab5.Apps
                 {
                     StreamReader inputFile = File.OpenText(inputFileDialog.FileName);
 
-                    while (!inputFile.EndOfStream)
+                    while (!inputFile.EndOfStream) // Looping through all the numbers on the file.
                     {
-                        string item = (inputFile.ReadLine()).ToString();
+                        string item = (inputFile.ReadLine()).ToString(); // Getting the number on the current line.
 
-                        numbersListBox.Items.Add(item);
-                        int itemNumber = int.Parse(item);
+                        numbersListBox.Items.Add(item); // Adding said number to our list box.
+
+                        // Parsing and calculating the total.
+                        int itemNumber = int.Parse(item); 
                         total = total + itemNumber;
                     }
 
@@ -39,9 +42,11 @@ namespace CS161_Lab5.Apps
 
             }catch(Exception err)
             {
-                MessageBox.Show(err.Message);
+                MessageBox.Show(err.Message); // Catch any unforseen errors and any invlaid inputs provided.
             }
         }
+
+        //Exit button method.
 
         private void exitButton_Click(object sender, System.EventArgs e)
         {
