@@ -10,9 +10,12 @@ namespace CS161_Lab5.Apps
             InitializeComponent();
         }
 
+        // Declaring vairbales to hold our random numbers for the creation of our math problem.
         private Random random = new Random();
         private int firstNumber;
         private int secondNumber;
+
+        //Declaring our event method for creating a new math problem.
         private void newButton_Click(object sender, EventArgs e)
         {
             firstNumber = random.Next(100, 500);
@@ -23,6 +26,7 @@ namespace CS161_Lab5.Apps
             answerTextBox.Focus();
         }
 
+        //Declaring a method to handle the checking of the clients answer and comparing it to the actual answer.
         private void checkButton_Click(object sender, EventArgs e)
         {
             try
@@ -51,6 +55,7 @@ namespace CS161_Lab5.Apps
 
         }
 
+        //Exit button event method.
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
