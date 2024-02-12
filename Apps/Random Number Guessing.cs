@@ -10,14 +10,20 @@ namespace CS161_Lab5.Apps
             InitializeComponent();
         }
 
+        //Declaring global vairables to track the actual number and number of attempts.
+
         int toBeGuessed = 0;
         int guessedCount = 0;
+
+        //Method to generate a new number.
         private void Random_Number_Guessing_Load(object sender, EventArgs e)
         {
             Random rand = new Random();
             toBeGuessed = rand.Next(1, 100);
         }
 
+
+        //Method to check if the clients answer is the correct guest and to add to the guess counter if applicable.
         private void guessButton_Click(object sender, EventArgs e)
         {
             bool enchacement = enchancementCheckBox.Checked;
@@ -42,6 +48,7 @@ namespace CS161_Lab5.Apps
             }
         }
 
+        //Exit button event method.
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Close();
